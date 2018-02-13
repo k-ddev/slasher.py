@@ -160,7 +160,6 @@ class Page():
         responses = grequests.map(reqs)
         for response in responses:
             if response.status_code >= 200 and response.status_code < 300:
-                if response.url 
                 self.subpages.append(Page(response.url))
                 if not quiet:
                     print("\r      └──> Found %s" % response.url + "\033[K")
